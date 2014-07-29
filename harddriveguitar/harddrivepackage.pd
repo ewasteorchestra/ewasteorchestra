@@ -1,0 +1,888 @@
+#N canvas 340 73 884 380 10;
+#N canvas 0 0 1362 686 sendchord 0;
+#X msg 241 135 60;
+#X msg 240 167 64;
+#X msg 241 200 67;
+#X obj 191 173 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 283 450 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 287 152 s first;
+#X obj 285 217 s fifth;
+#X obj 284 249 s seventh;
+#X obj 378 422 s first;
+#X obj 376 487 s fifth;
+#X obj 375 519 s seventh;
+#X obj 284 183 s third;
+#X obj 381 452 s third;
+#X obj 189 315 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 284 287 s first;
+#X obj 282 352 s fifth;
+#X obj 281 384 s seventh;
+#X obj 287 317 s third;
+#X msg 241 232 72;
+#X obj 462 49 key;
+#X obj 478 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 573 428 s first;
+#X obj 571 493 s fifth;
+#X obj 570 525 s seventh;
+#X obj 576 458 s third;
+#X obj 661 449 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 711 407 67;
+#X msg 711 476 74;
+#X msg 710 438 71;
+#X obj 756 421 s first;
+#X obj 754 486 s fifth;
+#X obj 753 518 s seventh;
+#X obj 759 451 s third;
+#X msg 711 508 78;
+#X obj 758 313 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 853 285 s first;
+#X obj 851 350 s fifth;
+#X obj 850 382 s seventh;
+#X obj 856 315 s third;
+#X obj 750 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 845 132 s first;
+#X obj 843 197 s fifth;
+#X obj 842 229 s seventh;
+#X obj 848 162 s third;
+#X obj 462 86 select 49 50 51 52 53 54 55;
+#X msg 239 273 62;
+#X msg 238 304 65;
+#X msg 239 342 69;
+#X msg 239 374 74;
+#X msg 333 408 64;
+#X msg 332 439 67;
+#X msg 332 477 71;
+#X msg 333 509 76;
+#X msg 528 414 65;
+#X msg 527 445 69;
+#X msg 528 483 72;
+#X msg 528 515 77;
+#X msg 808 271 69;
+#X msg 807 302 72;
+#X msg 808 340 76;
+#X msg 808 372 81;
+#X msg 800 118 71;
+#X msg 799 149 74;
+#X msg 800 187 77;
+#X msg 800 219 83;
+#X obj 188 99 loadbang;
+#X text 59 62 Necessary loadbang to send starting pitches of the I
+chord to the output object without having to click any keys.;
+#X text 494 -25 The key object outputs the ASCII value of any key on
+the keyboard. The pure data sketch must be 'in focus' for this to function.
+49 thru 55 are the ASCII values of the numbers 1 through 7 on the keypad
+(numpad or regualar keyboard). When one of these keys is pressed the
+corresponding MIDI values of that chord will be sent to the output
+subpatch. If the code is unresponsive \, make sure you have numlock
+on!;
+#X text 67 576 Sidenote: this patch doesn't need a set of 'first \,
+third \, fifth \, seventh' send objects for every chord \, but is arranged
+this way for clarity and copy-paste-ability.;
+#X text 355 106 I;
+#X text 370 155 ii;
+#X text 411 191 iii;
+#X text 486 226 IV;
+#X text 579 234 V;
+#X text 657 211 vi;
+#X text 697 143 vii;
+#X connect 0 0 5 0;
+#X connect 1 0 11 0;
+#X connect 2 0 6 0;
+#X connect 3 0 0 0;
+#X connect 3 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 0 18 0;
+#X connect 4 0 49 0;
+#X connect 4 0 50 0;
+#X connect 4 0 51 0;
+#X connect 4 0 52 0;
+#X connect 13 0 45 0;
+#X connect 13 0 46 0;
+#X connect 13 0 47 0;
+#X connect 13 0 48 0;
+#X connect 18 0 7 0;
+#X connect 19 0 44 0;
+#X connect 20 0 53 0;
+#X connect 20 0 54 0;
+#X connect 20 0 55 0;
+#X connect 20 0 56 0;
+#X connect 25 0 26 0;
+#X connect 25 0 28 0;
+#X connect 25 0 27 0;
+#X connect 25 0 33 0;
+#X connect 26 0 29 0;
+#X connect 27 0 30 0;
+#X connect 28 0 32 0;
+#X connect 33 0 31 0;
+#X connect 34 0 57 0;
+#X connect 34 0 58 0;
+#X connect 34 0 59 0;
+#X connect 34 0 60 0;
+#X connect 39 0 61 0;
+#X connect 39 0 62 0;
+#X connect 39 0 63 0;
+#X connect 39 0 64 0;
+#X connect 44 0 3 0;
+#X connect 44 1 13 0;
+#X connect 44 2 4 0;
+#X connect 44 3 20 0;
+#X connect 44 4 25 0;
+#X connect 44 5 34 0;
+#X connect 44 6 39 0;
+#X connect 45 0 14 0;
+#X connect 46 0 17 0;
+#X connect 47 0 15 0;
+#X connect 48 0 16 0;
+#X connect 49 0 8 0;
+#X connect 50 0 12 0;
+#X connect 51 0 9 0;
+#X connect 52 0 10 0;
+#X connect 53 0 21 0;
+#X connect 54 0 24 0;
+#X connect 55 0 22 0;
+#X connect 56 0 23 0;
+#X connect 57 0 35 0;
+#X connect 58 0 38 0;
+#X connect 59 0 36 0;
+#X connect 60 0 37 0;
+#X connect 61 0 40 0;
+#X connect 62 0 43 0;
+#X connect 63 0 41 0;
+#X connect 64 0 42 0;
+#X connect 65 0 3 0;
+#X restore 36 245 pd sendchord;
+#N canvas 260 286 981 300 analogroute 0;
+#X obj 78 60 arduino 0;
+#X obj 84 97 route analog;
+#X obj 94 135 route 0 1 2 3 4 5;
+#X floatatom 62 182 5 0 0 0 - - -;
+#X floatatom 102 183 5 0 0 0 - - -;
+#X floatatom 140 183 5 0 0 0 - - -;
+#X floatatom 179 182 5 0 0 0 - - -;
+#X floatatom 222 186 5 0 0 0 - - -;
+#X floatatom 265 188 5 0 0 0 - - -;
+#X obj 2 224 send a0;
+#X obj 55 226 send a1;
+#X obj 110 227 send a2;
+#X obj 168 226 send a3;
+#X obj 225 229 send a4;
+#X obj 281 230 send a5;
+#X obj 77 22 inlet;
+#X text 127 17 inlet allows open and close messages to be sent to the
+arduino object.;
+#X text 309 145 each data stream will read 0 when nothing is moving.
+If one of these is fluctuating wildly without touching the instrument
+\, then either something isn't grounded or a wire isn't seated all
+the way into the header.;
+#X text 359 210 These wires should be rearranged to your convenience.
+Spin a single disk and observe which number bounces up and down \,
+and connect a wire from that object to a send object in the order the
+disks are physically arranged. a1 \, a2 \, a3 \, and a4 control the
+volume of the 1st \, 3rd \, 5th \, and 7th pitch of a chord \, respectively.
+a0 controls a 'noise' element \, and a5 controls pitch bend.;
+#X text 199 95 receives data from 'analog inputs' of arduino \, which
+must be routed into individual data streams - arduino must have "Firmata
+Simple Analog" code running for this to work!.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 2 3 6 0;
+#X connect 2 4 7 0;
+#X connect 2 5 8 0;
+#X connect 3 0 9 0;
+#X connect 4 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 12 0;
+#X connect 7 0 13 0;
+#X connect 8 0 14 0;
+#X connect 15 0 0 0;
+#X restore 32 66 pd analogroute;
+#N canvas 45 79 1279 583 chordfader 0;
+#X floatatom 93 103 5 0 0 0 - - -;
+#X obj 76 -82 receive a0;
+#X obj 95 127 s out0;
+#X obj 102 -54 r countup;
+#X obj 127 -21 r countdownMetro;
+#X obj 166 7 r countdownAmount;
+#X obj 196 35 r divisor;
+#N canvas 21 0 638 700 fade 0;
+#X floatatom 202 354 5 0 0 0 - - -;
+#X obj 269 177 metro 1;
+#X obj 276 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 307 446 5 0 0 0 - - -;
+#X floatatom 311 520 5 0 0 0 - - -;
+#X obj 304 484 max 0;
+#X obj 250 473 / 10;
+#X obj 201 291 f;
+#X obj 302 403 f;
+#X obj 324 299 metro 50;
+#X obj 344 402 - 0.5;
+#X obj 288 13 inlet;
+#X obj 342 13 inlet;
+#X obj 394 13 inlet;
+#X obj 314 256 loadbang;
+#X obj 441 12 inlet;
+#X obj 494 14 inlet;
+#X obj 255 557 outlet;
+#X obj 252 510 min 1;
+#X obj 225 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 263 145 5 0 0 0 - - -;
+#X obj 265 289 +;
+#X connect 0 0 6 0;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 1 0 19 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 18 0;
+#X connect 7 0 0 0;
+#X connect 7 0 21 0;
+#X connect 8 0 3 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 20 0;
+#X connect 12 0 21 1;
+#X connect 13 0 9 1;
+#X connect 14 0 9 0;
+#X connect 15 0 10 1;
+#X connect 16 0 6 1;
+#X connect 18 0 17 0;
+#X connect 20 0 1 0;
+#X connect 21 0 7 1;
+#X restore 77 68 pd fade;
+#X obj 377 -143 s countup;
+#X obj 449 -141 s countdownMetro;
+#X obj 558 -140 s countdownAmount;
+#X obj 671 -139 s divisor;
+#X floatatom 673 -174 5 0 0 0 - - -;
+#X floatatom 289 93 5 0 0 0 - - -;
+#X obj 298 -62 r countup;
+#X obj 323 -29 r countdownMetro;
+#X obj 362 -1 r countdownAmount;
+#X obj 392 27 r divisor;
+#N canvas 66 329 638 759 fade 0;
+#X floatatom 202 354 5 0 0 0 - - -;
+#X obj 269 177 metro 1;
+#X obj 276 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 307 446 5 0 0 0 - - -;
+#X floatatom 311 520 5 0 0 0 - - -;
+#X obj 304 484 max 0;
+#X obj 250 473 / 10;
+#X obj 201 291 f;
+#X obj 302 403 f;
+#X obj 324 299 metro 50;
+#X obj 344 402 - 0.5;
+#X obj 288 13 inlet;
+#X obj 342 13 inlet;
+#X obj 394 13 inlet;
+#X obj 314 256 loadbang;
+#X obj 441 12 inlet;
+#X obj 494 14 inlet;
+#X obj 255 557 outlet;
+#X obj 252 510 min 1;
+#X obj 225 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 263 145 5 0 0 0 - - -;
+#X obj 265 289 +;
+#X connect 0 0 6 0;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 1 0 19 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 18 0;
+#X connect 7 0 0 0;
+#X connect 7 0 21 0;
+#X connect 8 0 3 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 20 0;
+#X connect 12 0 21 1;
+#X connect 13 0 9 1;
+#X connect 14 0 9 0;
+#X connect 15 0 10 1;
+#X connect 16 0 6 1;
+#X connect 18 0 17 0;
+#X connect 20 0 1 0;
+#X connect 21 0 7 1;
+#X restore 273 60 pd fade;
+#X obj 272 -90 receive a1;
+#X obj 291 119 s out1;
+#X floatatom 483 86 5 0 0 0 - - -;
+#X obj 492 -69 r countup;
+#X obj 517 -36 r countdownMetro;
+#X obj 556 -8 r countdownAmount;
+#X obj 586 20 r divisor;
+#N canvas 66 329 638 759 fade 0;
+#X floatatom 202 354 5 0 0 0 - - -;
+#X obj 269 177 metro 1;
+#X obj 276 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 307 446 5 0 0 0 - - -;
+#X floatatom 311 520 5 0 0 0 - - -;
+#X obj 304 484 max 0;
+#X obj 250 473 / 10;
+#X obj 201 291 f;
+#X obj 302 403 f;
+#X obj 324 299 metro 50;
+#X obj 344 402 - 0.5;
+#X obj 288 13 inlet;
+#X obj 342 13 inlet;
+#X obj 394 13 inlet;
+#X obj 314 256 loadbang;
+#X obj 441 12 inlet;
+#X obj 494 14 inlet;
+#X obj 255 557 outlet;
+#X obj 225 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 263 145 5 0 0 0 - - -;
+#X obj 265 289 +;
+#X obj 252 510 min 1;
+#X connect 0 0 6 0;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 1 0 18 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 21 0;
+#X connect 7 0 0 0;
+#X connect 7 0 20 0;
+#X connect 8 0 3 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 19 0;
+#X connect 12 0 20 1;
+#X connect 13 0 9 1;
+#X connect 14 0 9 0;
+#X connect 15 0 10 1;
+#X connect 16 0 6 1;
+#X connect 19 0 1 0;
+#X connect 20 0 7 1;
+#X connect 21 0 17 0;
+#X restore 467 53 pd fade;
+#X floatatom 679 78 5 0 0 0 - - -;
+#X obj 688 -77 r countup;
+#X obj 713 -44 r countdownMetro;
+#X obj 752 -16 r countdownAmount;
+#X obj 782 12 r divisor;
+#N canvas 66 329 638 759 fade 0;
+#X floatatom 202 354 5 0 0 0 - - -;
+#X obj 269 177 metro 1;
+#X obj 276 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 307 446 5 0 0 0 - - -;
+#X floatatom 311 520 5 0 0 0 - - -;
+#X obj 304 484 max 0;
+#X obj 250 473 / 10;
+#X obj 201 291 f;
+#X obj 302 403 f;
+#X obj 324 299 metro 50;
+#X obj 344 402 - 0.5;
+#X obj 288 13 inlet;
+#X obj 342 13 inlet;
+#X obj 394 13 inlet;
+#X obj 314 256 loadbang;
+#X obj 441 12 inlet;
+#X obj 494 14 inlet;
+#X obj 255 557 outlet;
+#X obj 252 510 min 1;
+#X obj 225 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 263 145 5 0 0 0 - - -;
+#X obj 265 289 +;
+#X connect 0 0 6 0;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 1 0 19 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 18 0;
+#X connect 7 0 0 0;
+#X connect 7 0 21 0;
+#X connect 8 0 3 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 20 0;
+#X connect 12 0 21 1;
+#X connect 13 0 9 1;
+#X connect 14 0 9 0;
+#X connect 15 0 10 1;
+#X connect 16 0 6 1;
+#X connect 18 0 17 0;
+#X connect 20 0 1 0;
+#X connect 21 0 7 1;
+#X restore 663 45 pd fade;
+#X obj 466 -97 receive a2;
+#X obj 662 -105 receive a3;
+#X obj 485 112 s out2;
+#X obj 681 104 s out3;
+#X floatatom 892 84 5 0 0 0 - - -;
+#X obj 901 -71 r countup;
+#X obj 926 -38 r countdownMetro;
+#X obj 965 -10 r countdownAmount;
+#X obj 995 18 r divisor;
+#N canvas 66 339 638 759 fade 0;
+#X floatatom 202 354 5 0 0 0 - - -;
+#X obj 269 177 metro 1;
+#X obj 276 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 307 446 5 0 0 0 - - -;
+#X floatatom 311 520 5 0 0 0 - - -;
+#X obj 304 484 max 0;
+#X obj 250 473 / 10;
+#X obj 201 291 f;
+#X obj 302 403 f;
+#X obj 324 299 metro 50;
+#X obj 344 402 - 0.5;
+#X obj 288 13 inlet;
+#X obj 342 13 inlet;
+#X obj 394 13 inlet;
+#X obj 314 256 loadbang;
+#X obj 441 12 inlet;
+#X obj 494 14 inlet;
+#X obj 255 557 outlet;
+#X obj 225 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 263 145 5 0 0 0 - - -;
+#X obj 265 289 +;
+#X obj 252 510 min 1;
+#X connect 0 0 6 0;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 1 0 18 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 21 0;
+#X connect 7 0 0 0;
+#X connect 7 0 20 0;
+#X connect 8 0 3 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 19 0;
+#X connect 12 0 20 1;
+#X connect 13 0 9 1;
+#X connect 14 0 9 0;
+#X connect 15 0 10 1;
+#X connect 16 0 6 1;
+#X connect 19 0 1 0;
+#X connect 20 0 7 1;
+#X connect 21 0 17 0;
+#X restore 876 51 pd fade;
+#X floatatom 1088 76 5 0 0 0 - - -;
+#X obj 1097 -79 r countup;
+#X obj 1122 -46 r countdownMetro;
+#X obj 1161 -18 r countdownAmount;
+#X obj 1191 10 r divisor;
+#N canvas 66 329 638 759 fade 0;
+#X floatatom 202 354 5 0 0 0 - - -;
+#X obj 269 177 metro 1;
+#X obj 276 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 307 446 5 0 0 0 - - -;
+#X floatatom 311 520 5 0 0 0 - - -;
+#X obj 304 484 max 0;
+#X obj 250 473 / 10;
+#X obj 201 291 f;
+#X obj 302 403 f;
+#X obj 324 299 metro 50;
+#X obj 344 402 - 0.5;
+#X obj 288 13 inlet;
+#X obj 342 13 inlet;
+#X obj 394 13 inlet;
+#X obj 314 256 loadbang;
+#X obj 441 12 inlet;
+#X obj 494 14 inlet;
+#X obj 255 557 outlet;
+#X obj 252 510 min 1;
+#X obj 225 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 263 145 5 0 0 0 - - -;
+#X obj 265 289 +;
+#X connect 0 0 6 0;
+#X connect 0 0 8 1;
+#X connect 1 0 2 0;
+#X connect 1 0 19 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 18 0;
+#X connect 7 0 0 0;
+#X connect 7 0 21 0;
+#X connect 8 0 3 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 20 0;
+#X connect 12 0 21 1;
+#X connect 13 0 9 1;
+#X connect 14 0 9 0;
+#X connect 15 0 10 1;
+#X connect 16 0 6 1;
+#X connect 18 0 17 0;
+#X connect 20 0 1 0;
+#X connect 21 0 7 1;
+#X restore 1072 43 pd fade;
+#X obj 875 -99 receive a4;
+#X obj 1071 -107 receive a5;
+#X obj 894 110 s out4;
+#X obj 1090 102 s out5;
+#X msg 468 -197 1;
+#X obj 552 -264 loadbang;
+#X msg 652 -215 50;
+#X msg 692 -214 100;
+#X msg 728 -214 250;
+#X text 70 -311 This subpatch controls the volume for each of the 6
+channels. It uses the fade subpatch \, which takes the raw signal from
+the arduino and smooths it into a crescendo / decrescendo as the disk
+is spun. '1' is a good value for countup \, countdown metro(nome) \,
+and countdown amount \, but these each can be adjusted for a different
+crescendo profile. 'divisor' is the most controlling variable - low
+values (below 100) will produce choppy \, instantaneous changes in
+volume whereas higher values produce a slow crescendo decrescendo.
+;
+#X text 103 160 Sidenote: this subpatch doesn't need near so many receive
+objects \, but I wanted each channel to be uniform in appearence (for
+easy copy-pasting) and so that wires wouldn't be going every-which-way.
+Every channel receives identical data from the countup \, countdown
+\, and divisor objects \, only the receive 'a1' 'a2' etc is unique.
+;
+#X text 614 -273 Necessary loadbang so that the fade subpatch has its
+starting values loaded.;
+#X obj 600 -216 inlet;
+#X text 765 -216 Default value is 50 click these messages to quickly
+change sensitivity of the volume control. You can also click and drag
+the number object to adjust this value. Inlet allows control from the
+main patch.;
+#X floatatom 536 -190 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 1 0 7 0;
+#X connect 3 0 7 1;
+#X connect 4 0 7 2;
+#X connect 5 0 7 3;
+#X connect 6 0 7 4;
+#X connect 7 0 0 0;
+#X connect 12 0 11 0;
+#X connect 13 0 20 0;
+#X connect 14 0 18 1;
+#X connect 15 0 18 2;
+#X connect 16 0 18 3;
+#X connect 17 0 18 4;
+#X connect 18 0 13 0;
+#X connect 19 0 18 0;
+#X connect 21 0 35 0;
+#X connect 22 0 26 1;
+#X connect 23 0 26 2;
+#X connect 24 0 26 3;
+#X connect 25 0 26 4;
+#X connect 26 0 21 0;
+#X connect 27 0 36 0;
+#X connect 28 0 32 1;
+#X connect 29 0 32 2;
+#X connect 30 0 32 3;
+#X connect 31 0 32 4;
+#X connect 32 0 27 0;
+#X connect 33 0 26 0;
+#X connect 34 0 32 0;
+#X connect 37 0 51 0;
+#X connect 38 0 42 1;
+#X connect 39 0 42 2;
+#X connect 40 0 42 3;
+#X connect 41 0 42 4;
+#X connect 42 0 37 0;
+#X connect 43 0 52 0;
+#X connect 44 0 48 1;
+#X connect 45 0 48 2;
+#X connect 46 0 48 3;
+#X connect 47 0 48 4;
+#X connect 48 0 43 0;
+#X connect 49 0 42 0;
+#X connect 50 0 48 0;
+#X connect 53 0 8 0;
+#X connect 53 0 9 0;
+#X connect 53 0 10 0;
+#X connect 54 0 53 0;
+#X connect 54 0 55 0;
+#X connect 55 0 12 0;
+#X connect 56 0 12 0;
+#X connect 57 0 12 0;
+#X connect 61 0 12 0;
+#X connect 63 0 10 0;
+#X restore 34 156 pd chordfader;
+#N canvas 104 45 1245 581 output 0;
+#X obj -193 112 mtof;
+#X obj -133 196 *~ 0;
+#X floatatom -193 86 5 0 0 0 - - -;
+#X obj -75 113 mtof;
+#X obj 2 200 *~ 0;
+#X floatatom -75 84 5 0 0 0 - - -;
+#X obj 48 114 mtof;
+#X obj 130 200 *~ 0;
+#X floatatom 48 85 5 0 0 0 - - -;
+#X obj 172 112 mtof;
+#X obj 254 204 *~ 0;
+#X floatatom 172 84 5 0 0 0 - - -;
+#X obj -126 285 dac~;
+#X obj 5 278 dac~;
+#X obj 135 276 dac~;
+#X obj 261 268 dac~;
+#X obj -193 52 r first;
+#X obj -75 52 r third;
+#X obj 48 54 r fifth;
+#X obj 172 55 r seventh;
+#X obj -98 167 r out1;
+#X obj 31 169 r out2;
+#X obj 151 171 r out3;
+#X obj 275 175 r out4;
+#X obj 269 -85 *~ 0;
+#X obj 276 -21 dac~;
+#X obj 208 -102 noise~;
+#X obj 290 -114 r out0;
+#X obj 274 -49 *~ 0.1;
+#X obj -128 257 *~ 0.2;
+#X obj 133 248 *~ 0.2;
+#X obj 3 250 *~ 0.2;
+#X obj 259 240 *~ 0.2;
+#N canvas 223 257 942 300 bend 0;
+#X obj 282 65 r out5;
+#X obj 359 115 inlet;
+#X obj 325 164 *;
+#X obj 286 105 * 0.0594;
+#X obj 296 129 + 1;
+#X obj 326 201 outlet;
+#X text 41 15 out5 will receive a value between 0 and 1 \, multiplying
+by the 'half step' value and bending the pitch in proportion to the
+spin of the disk connected to the 'a5' port;
+#X text 420 130 The result will be multiplied by the input frequency
+\, so when the disk doesn't spin at all \, we want to just multiply
+the input by 1 and send it to the outlet. When the disk is spinning
+at a maxxed out value \, the input freq will by multiplied by 1.0594
+\, resulting in a freq 1 half step up from the original.;
+#X text 417 20 Click this message to change the multiplier \, bending
+the pitch by a whole step.;
+#X text 417 52 Default multiplier is 0.0594 \, approximately the 12th
+root of 2 \, a multiplier that will step up any frequency by a 12th
+of an octave \, a.k.a. a half step. Click here to change the multiplier
+back to default.;
+#X msg 358 60 0.1188;
+#X floatatom 258 185 5 0 0 0 - - -;
+#X msg 356 85 0.0594;
+#X connect 0 0 3 0;
+#X connect 1 0 2 1;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 11 0;
+#X connect 10 0 3 1;
+#X connect 12 0 3 1;
+#X restore -174 140 pd bend;
+#N canvas 223 257 942 300 bend 0;
+#X obj 282 65 r out5;
+#X obj 359 115 inlet;
+#X obj 325 164 *;
+#X obj 286 105 * 0.0594;
+#X obj 296 129 + 1;
+#X obj 326 201 outlet;
+#X text 41 15 out5 will receive a value between 0 and 1 \, multiplying
+by the 'half step' value and bending the pitch in proportion to the
+spin of the disk connected to the 'a5' port;
+#X text 420 130 The result will be multiplied by the input frequency
+\, so when the disk doesn't spin at all \, we want to just multiply
+the input by 1 and send it to the outlet. When the disk is spinning
+at a maxxed out value \, the input freq will by multiplied by 1.0594
+\, resulting in a freq 1 half step up from the original.;
+#X text 417 20 Click this message to change the multiplier \, bending
+the pitch by a whole step.;
+#X text 417 52 Default multiplier is 0.0594 \, approximately the 12th
+root of 2 \, a multiplier that will step up any frequency by a 12th
+of an octave \, a.k.a. a half step. Click here to change the multiplier
+back to default.;
+#X msg 358 60 0.1188;
+#X floatatom 258 185 5 0 0 0 - - -;
+#X msg 356 85 0.0594;
+#X connect 0 0 3 0;
+#X connect 1 0 2 1;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 11 0;
+#X connect 10 0 3 1;
+#X connect 12 0 3 1;
+#X restore -47 144 pd bend;
+#N canvas 223 257 942 300 bend 0;
+#X obj 282 65 r out5;
+#X obj 359 115 inlet;
+#X obj 325 164 *;
+#X obj 286 105 * 0.0594;
+#X obj 296 129 + 1;
+#X obj 326 201 outlet;
+#X text 41 15 out5 will receive a value between 0 and 1 \, multiplying
+by the 'half step' value and bending the pitch in proportion to the
+spin of the disk connected to the 'a5' port;
+#X text 420 130 The result will be multiplied by the input frequency
+\, so when the disk doesn't spin at all \, we want to just multiply
+the input by 1 and send it to the outlet. When the disk is spinning
+at a maxxed out value \, the input freq will by multiplied by 1.0594
+\, resulting in a freq 1 half step up from the original.;
+#X text 417 20 Click this message to change the multiplier \, bending
+the pitch by a whole step.;
+#X text 417 52 Default multiplier is 0.0594 \, approximately the 12th
+root of 2 \, a multiplier that will step up any frequency by a 12th
+of an octave \, a.k.a. a half step. Click here to change the multiplier
+back to default.;
+#X msg 358 60 0.1188;
+#X floatatom 258 185 5 0 0 0 - - -;
+#X msg 356 85 0.0594;
+#X connect 0 0 3 0;
+#X connect 1 0 2 1;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 11 0;
+#X connect 10 0 3 1;
+#X connect 12 0 3 1;
+#X restore 73 144 pd bend;
+#N canvas 223 257 942 300 bend 0;
+#X obj 282 65 r out5;
+#X obj 359 115 inlet;
+#X obj 325 164 *;
+#X obj 286 105 * 0.0594;
+#X obj 296 129 + 1;
+#X obj 326 201 outlet;
+#X text 41 15 out5 will receive a value between 0 and 1 \, multiplying
+by the 'half step' value and bending the pitch in proportion to the
+spin of the disk connected to the 'a5' port;
+#X text 420 130 The result will be multiplied by the input frequency
+\, so when the disk doesn't spin at all \, we want to just multiply
+the input by 1 and send it to the outlet. When the disk is spinning
+at a maxxed out value \, the input freq will by multiplied by 1.0594
+\, resulting in a freq 1 half step up from the original.;
+#X text 417 20 Click this message to change the multiplier \, bending
+the pitch by a whole step.;
+#X text 417 52 Default multiplier is 0.0594 \, approximately the 12th
+root of 2 \, a multiplier that will step up any frequency by a 12th
+of an octave \, a.k.a. a half step. Click here to change the multiplier
+back to default.;
+#X msg 358 60 0.1188;
+#X floatatom 258 185 5 0 0 0 - - -;
+#X msg 356 85 0.0594;
+#X connect 0 0 3 0;
+#X connect 1 0 2 1;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 11 0;
+#X connect 10 0 3 1;
+#X connect 12 0 3 1;
+#X restore 201 144 pd bend;
+#X text -194 -139 The sendchord subpatch sends MIDI values of a chord
+to the 'r first' \, 'r third' \, 'r fifth' \, and 'r seventh' objects.
+'mtof' is midi-to-frequency \, and outputs a frequency ready to send
+to an oscillator. The bend subpatch multiplies the frequency in order
+to raise the pitch by a half step or whole step (options within the
+bend subpatch) The output of the osc~ object is a stream of sound which
+can be sent to a dac~ object. Before that \, it can be multiplied with
+a *~ object \, which adjusts the volume. 0 is silent \, 1 is full volume.
+The out1 \, out2 \, out3 \, and out4 objects receive a value between
+0 and 1 according to the setting in the chordfader subpatch \, thus
+controlling the voulme of each pitch individually.;
+#X text -149 313 Final output is multiplied by 0.2 because the sum
+of all sounds must be less than one \, otherwise clipping occurs and
+makes all sorts of ugly sounds.;
+#X text 359 -128 The noise~ object outputs a stream of white noise
+(static). The hdd connected to a0 will control the volume of this noise
+\, and can be used as a sort of percussive sound.;
+#X obj -150 168 osc~;
+#X obj -24 171 osc~;
+#X obj 100 172 osc~;
+#X obj 227 176 osc~;
+#X connect 0 0 33 0;
+#X connect 1 0 29 0;
+#X connect 2 0 0 0;
+#X connect 3 0 34 0;
+#X connect 4 0 31 0;
+#X connect 5 0 3 0;
+#X connect 6 0 35 0;
+#X connect 7 0 30 0;
+#X connect 8 0 6 0;
+#X connect 9 0 36 0;
+#X connect 10 0 32 0;
+#X connect 11 0 9 0;
+#X connect 16 0 2 0;
+#X connect 17 0 5 0;
+#X connect 18 0 8 0;
+#X connect 19 0 11 0;
+#X connect 20 0 1 1;
+#X connect 21 0 4 1;
+#X connect 22 0 7 1;
+#X connect 23 0 10 1;
+#X connect 24 0 28 0;
+#X connect 26 0 24 0;
+#X connect 27 0 24 1;
+#X connect 28 0 25 1;
+#X connect 28 0 25 0;
+#X connect 29 0 12 0;
+#X connect 29 0 12 1;
+#X connect 30 0 14 0;
+#X connect 30 0 14 1;
+#X connect 31 0 13 0;
+#X connect 31 0 13 1;
+#X connect 32 0 15 1;
+#X connect 32 0 15 0;
+#X connect 33 0 40 0;
+#X connect 34 0 41 0;
+#X connect 35 0 42 0;
+#X connect 36 0 43 0;
+#X connect 40 0 1 0;
+#X connect 41 0 4 0;
+#X connect 42 0 7 0;
+#X connect 43 0 10 0;
+#X restore 38 305 pd output;
+#X text 158 41 analogroute contains the arduino object and uses send
+objects to route the readings of the arduinos analog inputs to the
+chordfader subpatch.;
+#X msg 89 30 close;
+#X floatatom 34 130 5 0 0 0 - - -;
+#X msg 26 30 open 15;
+#X text 126 121 chordfader does the heavy lifting: converting the raw
+data from the arduino object into smooth changes in value. Changing
+the input value affects how smooth the change occurs - low values (less
+than 50) are choppy and responsive \, high values (above 200) takes
+some spinning to get up to maximum volume \, but is a smooth crescendo
+/ decrescendo.;
+#X text 130 244 sendchord uses input from the numpad (just plugged
+in via USB) to assign pitches in MIDI values to the oscillator in the
+output object.;
+#X text 127 304 output contains the oscillator objects which receive
+their pitch from the sendchord object and receive their volume from
+the chordfader object.;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;
